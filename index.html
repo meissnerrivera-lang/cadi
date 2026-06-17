@@ -1,0 +1,1556 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CADI - Centro de Asesoría en Derecho Internacional</title>
+  <meta name="description" content="CADI - Centro de Asesoría en Derecho Internacional. Formación, asesorías y eventos académicos en Derecho Internacional.">
+  <meta name="keywords" content="CADI, Derecho Internacional, Derecho de los Tratados, diplomacia, relaciones internacionales, asesoría académica">
+  <meta name="author" content="CADI - Centro de Asesoría en Derecho Internacional">
+  <meta property="og:title" content="CADI - Centro de Asesoría en Derecho Internacional">
+  <meta property="og:description" content="Formación, asesorías y eventos académicos en Derecho Internacional. Conectamos el Derecho con el Mundo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="cadi-logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="cadi-logo-mark.webp" type="image/webp">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <style>
+    :root {
+      --navy-950: #081426;
+      --navy-900: #0f213c;
+      --navy-800: #173254;
+      --navy-700: #1f456f;
+      --gold-600: #aa8439;
+      --gold-500: #c09a4a;
+      --gold-100: #f3ead8;
+      --ink: #172033;
+      --muted: #647086;
+      --muted-2: #8791a1;
+      --line: #dce2eb;
+      --line-dark: rgba(255, 255, 255, 0.18);
+      --paper: #ffffff;
+      --soft: #f6f8fb;
+      --soft-2: #eef2f7;
+      --success: #2f6f63;
+      --shadow-sm: 0 10px 24px rgba(8, 20, 38, 0.08);
+      --shadow-md: 0 22px 56px rgba(8, 20, 38, 0.14);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(192, 154, 74, 0.55);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(220, 226, 235, 0.9);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+    }
+
+    .topline {
+      border-bottom: 1px solid var(--line);
+      background: var(--navy-950);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.84rem;
+    }
+
+    .topline .container {
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .topline span:last-child {
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 250px;
+    }
+
+    .brand-mark {
+      width: 56px;
+      height: 48px;
+      display: block;
+      flex: 0 0 auto;
+      overflow: hidden;
+      border: 1px solid rgba(170, 132, 57, 0.42);
+      border-radius: 7px;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(8, 20, 38, 0.08);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      padding: 4px;
+    }
+
+    .brand-text strong,
+    .brand-text span {
+      display: block;
+    }
+
+    .brand-text strong {
+      color: var(--navy-900);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .brand-text span {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .site-nav a {
+      position: relative;
+      padding: 12px 10px;
+      color: #334158;
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 5px;
+      height: 2px;
+      background: var(--gold-600);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.22s ease;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--navy-900);
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--paper);
+      color: var(--navy-900);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 19px;
+      height: 2px;
+      margin: 4px auto;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-open .menu-toggle span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-open .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-open .menu-toggle span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--gold-600), var(--gold-500));
+      box-shadow: 0 12px 26px rgba(170, 132, 57, 0.24);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 16px 34px rgba(170, 132, 57, 0.3);
+    }
+
+    .btn-outline {
+      color: var(--paper);
+      border-color: rgba(255, 255, 255, 0.44);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-light {
+      color: var(--navy-900);
+      border-color: var(--line);
+      background: var(--paper);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 112px);
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(8, 20, 38, 0.98) 0%, rgba(15, 33, 60, 0.94) 42%, rgba(15, 33, 60, 0.45) 72%, rgba(15, 33, 60, 0.16) 100%),
+        url("https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1900&q=86") center right / cover;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 84px 84px;
+      mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.05));
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      min-height: calc(100vh - 112px);
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 78px 0 92px;
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--gold-500);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 18px;
+      font-size: clamp(2.75rem, 6.4vw, 5.95rem);
+      line-height: 0.96;
+    }
+
+    .hero-lede {
+      max-width: 650px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 38px;
+    }
+
+    .hero-panel {
+      max-width: 640px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-panel div {
+      min-height: 112px;
+      padding: 20px 18px;
+      border-right: 1px solid var(--line-dark);
+    }
+
+    .hero-panel div:last-child {
+      border-right: 0;
+    }
+
+    .hero-panel strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      line-height: 1.16;
+    }
+
+    .hero-panel span {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 88px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .section-muted {
+      background: var(--soft);
+    }
+
+    .event-highlight {
+      padding: 34px 0;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(246, 248, 251, 0.96), rgba(255, 255, 255, 0.98)),
+        linear-gradient(135deg, rgba(170, 132, 57, 0.12), transparent 44%);
+    }
+
+    .event-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 28px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold-600);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .event-card h2 {
+      margin-bottom: 8px;
+      color: var(--navy-900);
+      font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+      line-height: 1.12;
+    }
+
+    .event-title {
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .event-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+    }
+
+    .section-dark {
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(15, 33, 60, 0.98), rgba(8, 20, 38, 0.98)),
+        radial-gradient(circle at 82% 20%, rgba(192, 154, 74, 0.22), transparent 34%);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+      gap: 38px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+
+    .section-head.centered {
+      display: block;
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--gold-600);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-dark .section-kicker {
+      color: #e0bf72;
+    }
+
+    .section-title {
+      margin-bottom: 0;
+      color: var(--navy-900);
+      font-size: clamp(2rem, 4.6vw, 3.55rem);
+      line-height: 1.02;
+    }
+
+    .section-dark .section-title,
+    .section-dark h3 {
+      color: #fff;
+    }
+
+    .section-copy {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .section-dark .section-copy {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .statement {
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .statement p {
+      margin-bottom: 0;
+      color: #344057;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 2.1vw, 1.72rem);
+      line-height: 1.36;
+    }
+
+    .principles {
+      display: grid;
+      gap: 14px;
+    }
+
+    .principle {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold-600);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .principle h3 {
+      margin-bottom: 6px;
+      color: var(--navy-900);
+      font-size: 1.18rem;
+    }
+
+    .principle p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .proposal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 100%;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 12px 34px rgba(8, 20, 38, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(170, 132, 57, 0.38);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 26px;
+      top: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--gold-600);
+    }
+
+    .card h3 {
+      margin: 12px 0 10px;
+      color: var(--navy-900);
+      font-size: 1.32rem;
+      line-height: 1.15;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .area {
+      min-height: 148px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.065);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .area:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .area .number {
+      display: block;
+      margin-bottom: 20px;
+      color: #e0bf72;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .area h3 {
+      margin-bottom: 8px;
+      font-size: 1.16rem;
+      line-height: 1.2;
+    }
+
+    .area p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+    }
+
+    .programs {
+      display: grid;
+      gap: 14px;
+    }
+
+    .program {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 22px;
+      align-items: center;
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 8px 28px rgba(8, 20, 38, 0.05);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .program:hover {
+      transform: translateX(3px);
+      border-color: rgba(170, 132, 57, 0.42);
+    }
+
+    .program h3 {
+      margin-bottom: 6px;
+      color: var(--navy-900);
+      font-size: 1.24rem;
+    }
+
+    .program p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy-800);
+      background: var(--soft);
+      font-size: 0.84rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .team-panel {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .team-note {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--navy-900);
+      color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .team-note h3 {
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+    }
+
+    .team-note p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .team-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .team-item {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .team-item h3 {
+      margin-bottom: 6px;
+      color: var(--navy-900);
+      font-size: 1.12rem;
+    }
+
+    .team-item p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .certificate-layout {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .certificate-card {
+      position: relative;
+      padding: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+    }
+
+    .certificate-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(192, 154, 74, 0.36);
+      border-radius: 5px;
+      pointer-events: none;
+    }
+
+    .certificate-card .seal {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid rgba(224, 191, 114, 0.7);
+      border-radius: 50%;
+      color: #e0bf72;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+    }
+
+    .certificate-card h3 {
+      max-width: 360px;
+      margin-bottom: 14px;
+      font-size: 1.55rem;
+      line-height: 1.18;
+    }
+
+    .certificate-card p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .verify-form {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--ink);
+      box-shadow: var(--shadow-md);
+    }
+
+    .verify-form label,
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy-900);
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .verify-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #cfd7e3;
+      border-radius: 5px;
+      color: var(--ink);
+      background: #fff;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold-600);
+      box-shadow: 0 0 0 4px rgba(192, 154, 74, 0.14);
+      outline: 0;
+    }
+
+    textarea {
+      min-height: 132px;
+      resize: vertical;
+    }
+
+    .verify-result {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 16px 0 0;
+      padding: 14px;
+      border: 1px solid rgba(47, 111, 99, 0.22);
+      border-radius: 6px;
+      color: #285f55;
+      background: rgba(47, 111, 99, 0.08);
+      font-size: 0.92rem;
+    }
+
+    .verify-result span {
+      width: 18px;
+      height: 18px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--success);
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .contact-details {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--soft);
+    }
+
+    .contact-details h3 {
+      margin-bottom: 14px;
+      color: var(--navy-900);
+      font-size: 1.4rem;
+    }
+
+    .contact-details p {
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      color: var(--navy-800);
+      font-weight: 800;
+    }
+
+    .contact-list small {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .site-footer {
+      color: rgba(255, 255, 255, 0.72);
+      background: var(--navy-950);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      padding: 42px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .footer-brand .brand-mark {
+      background: transparent;
+      border-color: rgba(224, 191, 114, 0.36);
+      box-shadow: none;
+    }
+
+    .footer-brand strong {
+      display: block;
+      color: #fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+    }
+
+    .footer-brand span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, 0.64);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px 18px;
+      align-content: center;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: #e0bf72;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0 24px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1040px) {
+      .site-nav {
+        gap: 0;
+      }
+
+      .site-nav a {
+        padding-inline: 8px;
+        font-size: 0.9rem;
+      }
+
+      .proposal-grid,
+      .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .topline {
+        display: none;
+      }
+
+      .nav-wrap {
+        min-height: 70px;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .site-nav {
+        position: fixed;
+        inset: 70px 0 auto 0;
+        display: grid;
+        gap: 0;
+        padding: 14px 20px 22px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-125%);
+        transition: transform 0.24s ease;
+      }
+
+      .menu-open .site-nav {
+        transform: translateY(0);
+      }
+
+      .site-nav a {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .site-nav a::after {
+        display: none;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .hero {
+        min-height: auto;
+        background:
+          linear-gradient(90deg, rgba(8, 20, 38, 0.98), rgba(15, 33, 60, 0.82)),
+          url("https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1300&q=84") center / cover;
+      }
+
+      .hero .container {
+        min-height: auto;
+        padding: 74px 0 82px;
+      }
+
+      .section-head,
+      .split,
+      .team-panel,
+      .certificate-layout,
+      .contact-layout,
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        gap: 14px;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .brand-text span {
+        display: none;
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 42px;
+      }
+
+      .hero-panel,
+      .proposal-grid,
+      .areas-grid,
+      .team-list,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel div {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--line-dark);
+      }
+
+      .hero-panel div:last-child {
+        border-bottom: 0;
+      }
+
+      .event-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .contact-list a,
+      .contact-list span {
+        display: block;
+      }
+
+      .contact-list small {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      section {
+        padding: 66px 0;
+      }
+
+      .statement,
+      .card,
+      .contact-details,
+      .contact-form,
+      .verify-form,
+      .certificate-card {
+        padding: 24px;
+      }
+
+      .program {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .tag {
+        width: max-content;
+      }
+
+      .verify-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline" aria-label="Información institucional">
+      <div class="container">
+        <span>Formación, asesorías y eventos en Derecho Internacional</span>
+        <span>CADI - Centro de Asesoría en Derecho Internacional</span>
+      </div>
+    </div>
+
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio de CADI">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="cadi-logo-mark.webp" alt="" width="56" height="48" decoding="async">
+        </span>
+        <span class="brand-text">
+          <strong>CADI</strong>
+          <span>Centro de Asesoría en Derecho Internacional</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#evento">Evento</a>
+        <a href="#propuesta">Propuesta</a>
+        <a href="#areas">Áreas</a>
+        <a href="#programas">Programas</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <p class="eyebrow">Centro de Asesoría en Derecho Internacional</p>
+          <h1 id="hero-title">CADI</h1>
+          <p class="hero-lede">Conectamos el Derecho con el Mundo mediante formación, asesorías y actividades académicas en Derecho Internacional.</p>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="btn btn-primary" href="#propuesta">Conocer la propuesta</a>
+            <a class="btn btn-outline" href="#contacto">Contactar a CADI</a>
+          </div>
+          <div class="hero-panel" aria-label="Líneas de trabajo de CADI">
+            <div>
+              <strong>Formación</strong>
+              <span>Cursos y talleres con enfoque jurídico internacional.</span>
+            </div>
+            <div>
+              <strong>Asesorías</strong>
+              <span>Acompañamiento académico especializado.</span>
+            </div>
+            <div>
+              <strong>Eventos</strong>
+              <span>Conversatorios y sesiones de análisis internacional.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="event-highlight" id="evento" aria-labelledby="evento-title">
+      <div class="container">
+        <article class="event-card">
+          <div>
+            <p class="section-kicker">Próximo evento</p>
+            <h2 id="evento-title">Seminario Avanzado de Derecho de los Tratados</h2>
+            <p class="event-title">Convención de Viena sobre el Derecho de los Tratados de 1969</p>
+            <div class="event-meta" aria-label="Datos del evento">
+              <span>Modalidad virtual</span>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="#contacto">Inscribirme</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Nosotros</p>
+            <h2 class="section-title" id="nosotros-title">Un centro académico especializado en Derecho Internacional.</h2>
+          </div>
+          <p class="section-copy">CADI ofrece formación, asesorías y espacios de análisis con rigor jurídico, claridad académica y una mirada internacional.</p>
+        </div>
+
+        <article class="statement">
+          <p>Conectamos el Derecho con el Mundo desde una propuesta sobria, especializada y académicamente consistente.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-muted" id="propuesta" aria-labelledby="propuesta-title">
+      <div class="container">
+        <div class="section-head centered">
+          <p class="section-kicker">Nuestra propuesta académica</p>
+          <h2 class="section-title" id="propuesta-title">Formación y asesoría con enfoque internacional.</h2>
+          <p class="section-copy">Programas breves, asesorías académicas y espacios de discusión sobre temas centrales del Derecho Internacional.</p>
+        </div>
+
+        <div class="proposal-grid">
+          <article class="card">
+            <h3>Formación especializada</h3>
+            <p>Cursos y talleres sobre instituciones, fuentes y problemas actuales del Derecho Internacional.</p>
+          </article>
+          <article class="card">
+            <h3>Asesorías académicas</h3>
+            <p>Orientación para investigaciones, trabajos, artículos y preparación temática.</p>
+          </article>
+          <article class="card">
+            <h3>Actividades y eventos</h3>
+            <p>Seminarios y conversatorios sobre tratados, organismos internacionales y actualidad global.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="areas" aria-labelledby="areas-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Áreas de especialización</p>
+            <h2 class="section-title" id="areas-title">Campos centrales del Derecho Internacional.</h2>
+          </div>
+          <p class="section-copy">Materias esenciales para la formación y el análisis jurídico internacional.</p>
+        </div>
+
+        <div class="areas-grid">
+          <article class="area">
+            <span class="number">01</span>
+            <h3>Derecho de los Tratados</h3>
+            <p>Celebración, interpretación y efectos jurídicos de los tratados.</p>
+          </article>
+          <article class="area">
+            <span class="number">02</span>
+            <h3>Derecho Diplomático y Consular</h3>
+            <p>Funciones, inmunidades y práctica diplomática y consular.</p>
+          </article>
+          <article class="area">
+            <span class="number">03</span>
+            <h3>Organizaciones Internacionales</h3>
+            <p>Funcionamiento jurídico del sistema multilateral.</p>
+          </article>
+          <article class="area">
+            <span class="number">04</span>
+            <h3>Derechos Humanos</h3>
+            <p>Sistemas de protección y estándares internacionales.</p>
+          </article>
+          <article class="area">
+            <span class="number">05</span>
+            <h3>Solución de Controversias Internacionales</h3>
+            <p>Medios diplomáticos, jurisdiccionales y arbitrales.</p>
+          </article>
+          <article class="area">
+            <span class="number">06</span>
+            <h3>Derecho Internacional Económico</h3>
+            <p>Comercio, inversión e integración económica internacional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programas" aria-labelledby="programas-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Programas y actividades</p>
+            <h2 class="section-title" id="programas-title">Formatos académicos breves y especializados.</h2>
+          </div>
+          <p class="section-copy">Cursos, talleres y actividades virtuales diseñadas para profundizar en temas internacionales concretos.</p>
+        </div>
+
+        <div class="programs">
+          <article class="program">
+            <div>
+              <h3>Cursos de formación</h3>
+              <p>Módulos por materia con desarrollo claro de conceptos e instituciones.</p>
+            </div>
+            <span class="tag">Modalidad virtual</span>
+          </article>
+          <article class="program">
+            <div>
+              <h3>Talleres académicos</h3>
+              <p>Sesiones prácticas para fuentes, argumentos jurídicos e investigación.</p>
+            </div>
+            <span class="tag">Enfoque aplicado</span>
+          </article>
+          <article class="program">
+            <div>
+              <h3>Seminarios y conversatorios</h3>
+              <p>Espacios de discusión sobre actualidad internacional, tratados y jurisprudencia.</p>
+            </div>
+            <span class="tag">Actividad académica</span>
+          </article>
+          <article class="program">
+            <div>
+              <h3>Asesorías personalizadas</h3>
+              <p>Acompañamiento para temas, estructura, bibliografía y revisión académica.</p>
+            </div>
+            <span class="tag">Previa coordinación</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted" id="equipo" aria-labelledby="equipo-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Equipo CADI</p>
+            <h2 class="section-title" id="equipo-title">Un equipo académico especializado.</h2>
+          </div>
+          <p class="section-copy">CADI trabaja desde una estructura pequeña, con atención al contenido, rigor académico y especialización temática.</p>
+        </div>
+
+        <article class="team-note">
+          <h3>Especialización y cuidado académico</h3>
+          <p>El equipo CADI reúne perfiles orientados al estudio, enseñanza y análisis del Derecho Internacional, con una dinámica cercana y responsable.</p>
+        </article>
+      </div>
+    </section>
+
+    <!--
+    <section class="section-dark" id="certificados" aria-labelledby="certificados-title">
+      <div class="container certificate-layout">
+        <div>
+          <p class="section-kicker">Certificados</p>
+          <h2 class="section-title" id="certificados-title">Verificación simple para respaldar la participación académica.</h2>
+          <p class="section-copy">La sección de certificados está preparada para mostrar un mecanismo de validación por código. En una siguiente etapa puede conectarse a una base de datos real de participantes y actividades.</p>
+        </div>
+
+        <div class="certificate-card" aria-label="Vista institucional de certificado">
+          <span class="seal" aria-hidden="true">CADI</span>
+          <h3>Constancia verificable de participación</h3>
+          <p>Cada certificado puede identificarse con un código único, el nombre del programa y la fecha de emisión correspondiente.</p>
+        </div>
+
+        <form class="verify-form" aria-label="Verificación visual de certificado">
+          <label for="codigo-certificado">Código de certificado</label>
+          <div class="verify-row">
+            <input id="codigo-certificado" name="codigo-certificado" type="text" placeholder="Ej. CADI-2026-001" autocomplete="off">
+            <button class="btn btn-primary" type="button">Verificar</button>
+          </div>
+          <p class="verify-result"><span aria-hidden="true">✓</span>Vista de ejemplo: código reconocido por el sistema de verificación CADI.</p>
+        </form>
+      </div>
+    </section>
+    -->
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Contacto</p>
+            <h2 class="section-title" id="contacto-title">Solicita información sobre CADI.</h2>
+          </div>
+          <p class="section-copy">Escríbenos para consultas sobre formación, asesorías o actividades académicas.</p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="contact-details" aria-label="Datos de contacto">
+            <h3>Canales institucionales</h3>
+            <p>Canales de contacto para consultas académicas e institucionales.</p>
+            <div class="contact-list">
+              <a href="mailto:contacto@cadi.pe"><small>Correo</small> contacto@cadi.pe</a>
+              <a href="https://wa.me/51999999999"><small>WhatsApp</small> +51 999 999 999</a>
+              <span><small>LinkedIn</small> CADI</span>
+              <a href="https://www.instagram.com/cadi.internacional"><small>Instagram</small> @cadi.internacional</a>
+            </div>
+          </aside>
+
+          <form class="contact-form" aria-label="Formulario de contacto">
+            <div class="form-grid">
+              <div>
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre">
+              </div>
+              <div>
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" placeholder="tu@correo.com">
+              </div>
+              <div class="full">
+                <label for="interes">Tema de interés</label>
+                <input id="interes" name="interes" type="text" placeholder="Curso, asesoría, certificado o evento">
+              </div>
+              <div class="full">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="button">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="cadi-logo-mark.webp" alt="" width="56" height="48" loading="lazy" decoding="async">
+        </span>
+        <span>
+          <strong>CADI - Centro de Asesoría en Derecho Internacional</strong>
+          <span>Conectamos el Derecho con el Mundo.</span>
+        </span>
+      </div>
+      <nav class="footer-links" aria-label="Navegación del pie de página">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#evento">Evento</a>
+        <a href="#propuesta">Propuesta</a>
+        <a href="#areas">Áreas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 CADI. Todos los derechos reservados.</span>
+      <span>Formación, asesorías y eventos en Derecho Internacional.</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".site-nav");
+    const navLinks = document.querySelectorAll(".site-nav a");
+
+    function closeMenu() {
+      document.body.classList.remove("menu-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menú");
+    }
+
+    toggle.addEventListener("click", () => {
+      const isOpen = document.body.classList.toggle("menu-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && document.body.classList.contains("menu-open")) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+  </script>
+</body>
+</html>
